@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 /**
  * Intended to perform all initializations
  */
 
-import{default as AppLogger} from './logger.js';
+import { default as AppLogger } from "./logger.js";
 
 // INFO: Creating a Logger instance with windows Console object
 const appLoggerObj = new AppLogger(console);

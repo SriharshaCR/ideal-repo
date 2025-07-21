@@ -2,6 +2,10 @@
 
 > An `Ideal Repository` is the one that requires fewer maintenance efforts.
 
+<hr />
+[![Super-Linter](https://github.com/SriharshaCR/ideal-repo/actions/workflows/super-linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
+<hr />
 
 ## Aim
 
