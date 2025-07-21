@@ -1,5 +1,13 @@
 // This is a dummy JS file
 
+const ENGINE_TYPE = Object.freeze({
+    PETROL: 'PETROL',
+    DISEL: 'DISEL',
+    CNG: 'CNG',
+    ELECTRIC: 'ELECTRIC',
+    PHYBRID: 'PHYBRID'
+});
+
 
 export class Car {
     /** @var number */
@@ -40,9 +48,10 @@ export class FuelCar extends Car {
 }
 
 export class PetrolCar extends FuelCar {
+    static EngineType = ENGINE_TYPE.PETROL;
 
-    constructor(engineFuelCapacity, makeYear, engineType) {
-        super(engineFuelCapacity, makeYear, engineType)
+    constructor(engineFuelCapacity, makeYear) {
+        super(engineFuelCapacity, makeYear, PetrolCar.EngineType)
     }
 
     /** @override default toString() */
