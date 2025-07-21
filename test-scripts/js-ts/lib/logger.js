@@ -1,19 +1,17 @@
-'use strict';
+"use strict";
 
 export default class AppLogger {
+  static #loggerRef = null;
 
-    static #loggerRef = null;
+  get loggerRef() {
+    return AppLogger.#loggerRef;
+  }
 
-    get loggerRef() {
-        return AppLogger.#loggerRef
-    }
+  set loggerRef(ref) {
+    AppLogger.#loggerRef = ref;
+  }
 
-    set loggerRef(ref) {
-        AppLogger.#loggerRef = ref;
-    }
-
-    constructor(loggerRef) {
-        AppLogger.#loggerRef = loggerRef
-    }
-
+  constructor(loggerRef) {
+    AppLogger.#loggerRef = loggerRef;
+  }
 }
