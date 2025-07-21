@@ -10,3 +10,7 @@ This repository is created to showcase the necessary configurational aspects tha
 ## Bots
 
 ## Configs
+
+
+## References
+    [![Super-Linter](https://github.com/SriharshaCR/ideal-repo/actions/workflows/super-linter/badge.svg)](https://github.com/marketplace/actions/super-linter)
