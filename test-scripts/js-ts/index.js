@@ -10,7 +10,7 @@ appLogger.info('🤖 Starting the Node project');
 //////// Plug your code Below ⬇️
 
 appLogger.debug('🤓 Creating new Pertol car!')
-const hondaCivic = new PetrolCar(3.2, 2025, 'PETROL');
+let hondaCivic = new PetrolCar(3.2, 2025, 'PETROL');
 console.log("My car = ", hondaCivic);
 
 // This is an error to see if CodeScanner can Identify during the static analysis
