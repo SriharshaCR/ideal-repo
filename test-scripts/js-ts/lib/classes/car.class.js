@@ -1,6 +1,5 @@
 // This is a dummy JS file
 
-<<<<<<< HEAD
 const ENGINE_TYPE = Object.freeze({
     PETROL: 'PETROL',
     DISEL: 'DISEL',
@@ -10,8 +9,6 @@ const ENGINE_TYPE = Object.freeze({
 });
 
 
-=======
->>>>>>> dade3efc840932591df9d7cfb1b17a897d1b8682
 export class Car {
   /** @var number */
   #makeYear = -1;
