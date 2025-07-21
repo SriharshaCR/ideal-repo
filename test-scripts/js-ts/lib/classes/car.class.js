@@ -1,7 +1,7 @@
 // This is a dummy JS file
 
 
-class Car {
+export class Car {
     /** @var number */
     #makeYear = -1;
 
@@ -11,9 +11,14 @@ class Car {
     constructor(makeYear, engineType) {
         this.#engineType = engineType; this.#makeYear = makeYear;
     }
+
+    /** @override default toString() */
+    toString() {
+        Car.prototype.toString = JSON.stringify({makeYear: this.#makeYear, engineType:this.#engineType});
+    }
 }
 
-class FuelCar extends Car {
+export class FuelCar extends Car {
     /** 
      * @var number Cubic Liters represented as Floating point numbers
      * 
@@ -26,16 +31,23 @@ class FuelCar extends Car {
         super(makeYear, engineType);
         this.#engineFuelCapacity = engineFuelCapacity
     }
+
+    /** @override default toString() */
+    toString() {
+        const parentCarInfo = JSON.parse(super.toString());
+        FuelCar.prototype.toString = JSON.stringify({...parentCarInfo, engineFuelCapacity: this.#engineFuelCapacity });
+    }
 }
 
-class PetrolCar extends FuelCar {
+export class PetrolCar extends FuelCar {
 
     constructor(engineFuelCapacity, makeYear, engineType) {
         super(engineFuelCapacity, makeYear, engineType)
     }
 
+    /** @override default toString() */
+    toString() {
+        PetrolCar.prototype.toString = super.toString()
+    }
+
 }
-
-const hondaCivic = new PetrolCar(3.2, 2025, 'PETROL');
-
-console.log("My car = ", hondaCivic);
